@@ -8,9 +8,7 @@ let CATALOG = [];
 
 const getCatalog = async () => {
   try {
-    const response = await (
-      await fetch("http://myjson.dit.upm.es/api/bins/g68v")
-    ).json(); //Если ссылка не открывается используйте "server/catalog.json"
+    const response = await (await fetch("server/catalog.json")).json();
     CATALOG = response;
     render();
   } catch (err) {
